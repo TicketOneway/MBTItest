@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>安全检测中...</title>
+<style>
+body {
+    background: black;
+    color: #00ff00;
+    font-family: monospace;
+    text-align: center;
+    padding-top: 100px;
+}
+#text {
+    font-size: 24px;
+}
+</style>
+</head>
+<body>
+
+<div id="text">正在检测设备安全性...</div>
+
+<script>
+let messages = [
+    "正在检测设备安全性...",
+    "检测到设备：手机",
+    "正在分析最近操作...",
+    "发现异常点击行为...",
+    "尝试建立远程连接...",
+    "连接成功 ✔",
+    "正在读取数据...",
+    "读取完成 ✔",
+    
+    
+];
+
+let i = 0;
+
+function showText() {
+    if (i < messages.length) {
+        document.getElementById("text").innerText = messages[i];
+        i++;
+        setTimeout(showText, 1200);
+    }
+}
+
+showText();
+</script>
+
+</body>
+</html>
